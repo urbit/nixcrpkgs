@@ -38,6 +38,10 @@ rec {
     inherit crossenv;
   };
 
+  libgmp = import ./pkgs/libgmp {
+    inherit crossenv;
+  };
+
   gdb = import ./pkgs/gdb {
     inherit crossenv expat;
     curses = pdcurses;
