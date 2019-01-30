@@ -42,6 +42,10 @@ rec {
     inherit crossenv;
   };
 
+  libsigsegv = import ./pkgs/libsigsegv {
+    inherit crossenv;
+  };
+
   gdb = import ./pkgs/gdb {
     inherit crossenv expat;
     curses = pdcurses;
