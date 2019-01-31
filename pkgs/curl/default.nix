@@ -8,6 +8,12 @@ crossenv.make_derivation rec {
   native_inputs = [ zlib openssl ];
   builder       = ./builder.sh;
 
+  configureFlags = [
+    "--disable-shared"
+    "--disable-manual"
+    "--disable-ldap"
+  ];
+
   src = crossenv.nixpkgs.fetchurl {
     url = "https://curl.haxx.se/download/${name}.tar.bz2";
     sha256 = "084niy7cin13ba65p8x38w2xcyc54n3fgzbin40fa2shfr0ca0kq";

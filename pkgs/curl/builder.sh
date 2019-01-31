@@ -9,11 +9,7 @@ case $host in
   *darwin*) CFLAGS="$CFLAGS -mmacosx-version-min=10.11";;
 esac
 
-./configure             \
-  --disable-shared      \
-  --disable-manual      \
-  --prefix=$out         \
-  --host=$host
+./configure --prefix=$out --host=$host $configureFlags
 
 make
 make install
