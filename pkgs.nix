@@ -50,6 +50,10 @@ rec {
     inherit crossenv;
   };
 
+  curl = import ./pkgs/curl {
+    inherit crossenv openssl zlib;
+  };
+
   openssl = import ./pkgs/openssl {
     inherit crossenv;
   };
