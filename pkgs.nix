@@ -46,6 +46,10 @@ rec {
     inherit crossenv;
   };
 
+  openssl = import ./pkgs/openssl {
+    inherit crossenv;
+  };
+
   gdb = import ./pkgs/gdb {
     inherit crossenv expat;
     curses = pdcurses;
