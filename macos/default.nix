@@ -134,7 +134,7 @@ let
   sdk = native.make_derivation rec {
     name = "macos-sdk";
     builder = ./sdk_builder.sh;
-    src = ./MacOSX.sdk.tar.xz;
+    src = ./MacOSX10.11.sdk.tar.xz;
   };
 
   toolchain = native.make_derivation rec {
