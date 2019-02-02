@@ -4,7 +4,6 @@ crossenv.make_derivation rec {
   name = "ncurses-${version}";
   version = "6.1-20181027";
   builder = ./builder.sh;
-# patches = lib.optional (!stdenv.cc.isClang) ./clang.patch;
 
   # Needs to be the same version.
   native_inputs = [ crossenv.nixpkgs.ncurses ];
@@ -13,9 +12,9 @@ crossenv.make_derivation rec {
     "--without-debug"
     "--enable-pc-files"
     "--enable-symlinks"
-    "--with-manpage-format=normal"
+    # "--with-manpage-format=normal"
     "--without-cxx"
-    "--enable-widec"
+    # "--enable-widec"
   ];
 
   src = crossenv.nixpkgs.fetchurl {
