@@ -1,4 +1,4 @@
+/nixpkgs
 /result*
-/support/results
-macos/MacOSX10.12.sdk.tar.xz
-macos/MacOSX10.13.sdk.tar.xz
+/gcroots
+/gcroots.drv
