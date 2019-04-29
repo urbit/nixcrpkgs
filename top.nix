@@ -1,4 +1,4 @@
-{ nixpkgs }:
+{ osx_sdk, nixpkgs }:
 
 rec {
   inherit nixpkgs;
@@ -17,7 +17,7 @@ rec {
       arch = "armv6";
       gcc_options = "--with-fpu=vfp --with-float=hard ";
     };
-    macos = import ./macos { inherit native; };
+    macos = import ./macos { inherit osx_sdk native; };
   };
 
   pkgFun = crossenv: import ./pkgs.nix { inherit crossenv; } // crossenv;
